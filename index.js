@@ -84,18 +84,16 @@ const anonMessages = new Map();
 
 const commands = [
 
-  new SlashCommandBuilder()
-    .setName('botpost')
-    .setDescription('Send a bot message as an embed')
-    .addStringOption(o => o.setName('title').setDescription('Title of the embed').setRequired(true))
-    .addStringOption(o => o.setName('description').setDescription('Primary description').setRequired(true))
-    .addStringOption(o => o.setName('description2').setDescription('Secondary description').setRequired(false))
-    .addStringOption(o => o.setName('link').setDescription('Optional website link').setRequired(false))
-    .addRoleOption(o => o.setName('ping').setDescription('Optional role to ping').setRequired(false))
-    .addStringOption(o => o.setName('image').setDescription('URL for main embed image (optional)').setRequired(false))
-    .addStringOption(o => o.setName('thumbnail').setDescription('URL for embed thumbnail (optional)').setRequired(false)),
-    .addAttachmentOption(o => o.setName('image').setDescription('Upload main image (optional)').setRequired(false))
-    .addAttachmentOption(o => o.setName('thumbnail').setDescription('Upload thumbnail (optional)').setRequired(false)),
+ new SlashCommandBuilder()
+  .setName('botpost')
+  .setDescription('Send a bot message as an embed')
+  .addStringOption(o => o.setName('title').setDescription('Title of the embed').setRequired(true))
+  .addStringOption(o => o.setName('description').setDescription('Primary description').setRequired(true))
+  .addStringOption(o => o.setName('description2').setDescription('Secondary description').setRequired(false))
+  .addStringOption(o => o.setName('link').setDescription('Optional website link').setRequired(false))
+  .addRoleOption(o => o.setName('ping').setDescription('Optional role to ping').setRequired(false))
+  .addAttachmentOption(o => o.setName('image').setDescription('Upload main image (optional)').setRequired(false))
+  .addAttachmentOption(o => o.setName('thumbnail').setDescription('Upload thumbnail (optional)').setRequired(false)),
 
   new SlashCommandBuilder()
     .setName('poll')
